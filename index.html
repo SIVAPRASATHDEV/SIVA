@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="" class="form">
+                <h1>Create Account</h1>
+                
+                <span>or use your email for registration</span>
+            <div class="form-group">
+                <input type="text" placeholder="UserName" id = "username" autocomplete="on">
+                <i class="ion-ios-checkmark"></i>
+                <i class="ion-android-alert"></i>
+                <span></span>
+            </div>
+            <div class="form-group">
+               
+                <input type="text" placeholder="Email" id = "email" autocomplete="on">
+                <i class="ion-ios-checkmark"></i>
+                <i class="ion-android-alert"></i>
+                <span></span>
+            </div>
+            <div class="form-group">
+                
+                <input type="text" placeholder="Phone Number" id = "phonenumber" autocomplete="on">
+                <i class="ion-ios-checkmark"></i>
+                <i class="ion-android-alert"></i>
+                <span></span>
+            </div>
+            <div class="form-group">
+               
+                <input type="password" placeholder="Password" id = "password" autocomplete="on">
+                <i class="ion-ios-checkmark"></i>
+                <i class="ion-android-alert"></i>
+                <span></span>
+            </div>
+            <div class="form-group">
+               
+                <input type="password" placeholder="Confirm Password" id = "confirmpassword" autocomplete="on">
+                <i class="ion-ios-checkmark"></i>
+                <i class="ion-android-alert"></i>
+                <span></span>
+            </div>
+            <button id ="submit">Submit</button>
+        </form>
+            </form>
+        </div>
+        <div class="form-container log-in-container">
+            <form action="#">
+                <h1>Log in</h1>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button>Log In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Already have an account? Log In</p>
+                    <button class="ghost" id="logIn">Log In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, There!</h1>
+                    <p>Don't have an account? Sign Up Free</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
+   import { getFirestore , setDoc, addDoc , collection , query, where, getDocs} from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAJmBeK-OtIx8Wtp5eNXDQzHDi4rxxM1fE",
+    authDomain: "track-list-7e76e.firebaseapp.com",
+    projectId: "track-list-7e76e",
+    storageBucket: "track-list-7e76e.appspot.com",
+    messagingSenderId: "902393342983",
+    appId: "1:902393342983:web:e0979201cb468236690ea2",
+    measurementId: "G-3XE00DPHRX"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+   const db = getFirestore(app);
+</script>
+
+</body>
+
+</html>
